@@ -1,0 +1,44 @@
+{
+  "name": "booruwf",
+  "version": "0.21.4",
+  "author": "asadahimeka",
+  "description": "Booru sites masonry browsing mode.",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start:app": "electron ./",
+    "start:web": "cd web && yarn dev",
+    "build:app-dir": "yarn clean && electron-builder --dir",
+    "build:app": "electron-builder",
+    "build:web": "cd web && yarn build",
+    "clean": "rimraf -g \"./build/**/!(256x256|icon).*\"",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "productName": "Booru Masonry",
+    "appId": "me.asadahimeka.booruwf-desktop",
+    "asar": false,
+    "files": [
+      "./web/dist/**/*",
+      "./main.js",
+      "package.json"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "resources",
+      "output": "build"
+    },
+    "publish": null,
+    "win": {
+      "icon": "build/icons/icon.ico",
+      "target": "zip"
+    }
+  },
+  "devDependencies": {
+    "electron": "^20.1.4",
+    "electron-builder": "^23.3.3"
+  }
+}

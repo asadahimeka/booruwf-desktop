@@ -1,0 +1,40 @@
+{
+  "name": "booruwf-web",
+  "version": "0.21.4",
+  "private": true,
+  "description": "Booru sites masonry browsing mode.",
+  "author": "asadahimeka",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prebuild": "vue-tsc --noEmit --skipLibCheck",
+    "lint": "eslint src --ext .ts,.vue",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@himeka/booru": "2.7.1",
+    "@vue/composition-api": "1.7.0",
+    "date-fns": "2.29.2",
+    "vue": "2.6.14",
+    "vue-masonry-css": "1.0.3",
+    "vuetify": "2.6.9",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-vue": "0.26.2",
+    "@mdi/js": "^7.0.96",
+    "@types/node": "18.7.14",
+    "@types/webfontloader": "^1.6.34",
+    "@vue/runtime-dom": "latest",
+    "eslint": "8.23.0",
+    "sass": "1.32.12",
+    "typescript": "4.8.2",
+    "unplugin-vue2-script-setup": "0.11.3",
+    "vite": "3.0.9",
+    "vite-plugin-vue2": "2.0.2",
+    "vue-template-compiler": "2.6.14",
+    "vue-tsc": "0.40.4"
+  }
+}
